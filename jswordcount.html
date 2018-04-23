@@ -9,11 +9,9 @@
 
 <script>
     document.getElementById("submitButton").onclick = function countWords() {
-        //alert("asdasd");
         var text  = document.getElementById('inputarea').value;
-        text = text.replace(/\s\s+/g, ' ');
-        text = text.replace(/\s*$/,"");
-        document.getElementById("numberOfWords").innerHTML = text.split(" ").length;
-//        document.getElementById("numberOfWords").innerHTML = text[text.length-1];
+        text = text.replace(/\s\s+/g, ' '); // Cleans extra whitespaces and tabs
+        text = text.replace(/\s*$/,""); //Cleans whitespace at the end of the text if it is exist
+        document.getElementById("numberOfWords").innerHTML = text.split(" ").length; // Prints number of words
     };
 </script>
