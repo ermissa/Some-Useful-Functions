@@ -1,0 +1,19 @@
+<div id="container">
+
+    <input id="inputarea" type="text">
+
+    <button id="submitButton">Count Word Number</button>
+    
+    <div id="numberOfWords"></div>
+</div>
+
+<script>
+    document.getElementById("submitButton").onclick = function countWords() {
+        //alert("asdasd");
+        var text  = document.getElementById('inputarea').value;
+        text = text.replace(/\s\s+/g, ' ');
+        text = text.replace(/\s*$/,"");
+        document.getElementById("numberOfWords").innerHTML = text.split(" ").length;
+//        document.getElementById("numberOfWords").innerHTML = text[text.length-1];
+    };
+</script>
